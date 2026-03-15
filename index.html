@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aplicação de Geoprocessamento</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.css" />
+  <link rel="stylesheet" href="src/style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="topbar-text">
+        <p class="eyebrow">Desafio Técnico</p>
+        <h1>Aplicação de Geoprocessamento</h1>
+        <p class="subtitle">
+          Visualize, crie, edite, remova e exporte elementos geográficos em um mapa interativo.
+        </p>
+      </div>
+
+      <div class="actions">
+        <label for="fileInput" class="file-label">Importar GeoJSON</label>
+        <input type="file" id="fileInput" accept=".json,.geojson" />
+
+        <button id="exportBtn" class="btn btn-primary">Exportar</button>
+        <button id="clearBtn" class="btn btn-danger">Limpar mapa</button>
+      </div>
+    </header>
+
+    <main class="dashboard">
+      <section class="map-card">
+        <div class="section-header">
+          <div>
+            <h2>Mapa interativo</h2>
+            <p>Navegue, desenhe e edite pontos, linhas e polígonos.</p>
+          </div>
+          <span class="badge">Leaflet + GeoJSON</span>
+        </div>
+
+        <div id="map"></div>
+      </section>
+
+      <aside class="sidebar-card">
+        <div class="section-header">
+          <div>
+            <h2>Elementos</h2>
+            <p>Itens importados e desenhados no mapa.</p>
+          </div>
+        </div>
+
+        <div class="sidebar-content">
+          <div class="info-box">
+            <strong>Recursos</strong>
+            <ul class="feature-summary">
+              <li>Importação de JSON / GeoJSON</li>
+              <li>CRUD geográfico</li>
+              <li>Exportação de dados</li>
+              <li>Persistência local</li>
+            </ul>
+          </div>
+
+          <div class="list-wrapper">
+            <p class="list-title">Lista de elementos</p>
+            <ul id="featureList" class="feature-list"></ul>
+          </div>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js"></script>
+  <script src="src/script.js"></script>
+</body>
+</html>

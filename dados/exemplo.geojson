@@ -1,0 +1,27 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "nome": "Parque das Nações Indígenas",
+        "descricao": "Parque urbano em Campo Grande MS"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-54.577139, -20.451539]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nome": "Shopping Campo Grande",
+        "descricao": "Centro comercial em Campo Grande MS"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-54.587696, -20.458246]
+      }
+    }
+  ]
+}
